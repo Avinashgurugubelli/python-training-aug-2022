@@ -1,3 +1,6 @@
+from abc import ABC, abstractmethod
+
+
 class Employee:
     # Constructor is a special type of function which is called automatically when we create an object
     # self: Self in python is used to represent the current instance of a class.
@@ -42,7 +45,8 @@ print(emp_2.phone_number)
 
 '''
 # passing name and aadhar_number only
-emp_3 = Employee("Rose", 1265689) # this is wrong: here 2nd parameter will map to emailID
+# this is wrong: here 2nd parameter will map to emailID
+emp_3 = Employee("Rose", 1265689)
 
 1st way to achieve is passing empty value in the 2nd argument
 i.e. emp_3 = Employee("Rose", "", 1265689) or emp_3 = Employee("Rose", None, 1265689)
@@ -57,7 +61,7 @@ emp_3.print_details()
 # Encapsulation
 
 '''
-Encapsulation: this principal states that all important information is contained inside an object and only expose the necessary information.
+1. Encapsulation: this principal states that all important information is contained inside an object and only expose the necessary information.
 
 Access modifier:
 ---------------
@@ -71,3 +75,66 @@ Access modifier:
     - Value can be accessed inside a class but not outside the class
     - This can be specified to both attributes/fields, methods
 '''
+
+"""
+2. Abstraction:
+
+Abstraction is the process of hiding the internal details of an application from the outer world.
+
+"""
+
+# Abstract class
+"""
+Abstract class:
+ An abstract class can be considered as a blue print of other classes. It allows you to create a set of methods that
+ must be created with in the child classes built from the abstract class.
+
+"""
+
+"""
+Normal class
+
+class Car:
+    def turn_on(self):
+        pass
+
+
+Abstract class:
+
+class Car(ABC):
+    @abstractmethod
+    def turnOnCar(self):
+        pass
+
+- ABC is a in build python class -> it is inherited to  make an normal class a abstract class.
+- You can not create a object to the abstract class.
+
+What is the need of abstact class?
+- it will act blue print of other classes
+"""
+
+
+class Car(ABC):
+    @abstractmethod
+    def turn_on_Car(self):
+        pass
+
+    @abstractmethod
+    def turn_off_Car(self):
+        pass
+
+# car = Car()  # error: Can't instantiate abstract class
+
+# Inheritance
+
+
+class ManualCar(Car):
+    def turn_on_Car(self):
+        print("Manual car turn on")
+
+    def turn_off_Car(self):
+        print("Manual car turn off")
+
+
+c = ManualCar()
+c.turn_on_Car()
