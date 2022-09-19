@@ -7,7 +7,12 @@ Inheritance is the mechanism of creating new classes from existing ones.
 
 
 class Parent:
+    # protected
+    _family_name = "ABC"
+
     def __init__(self) -> None:
+        # public field
+        self.name = "Parent"
         print("parent class constructor called")
 
 
@@ -16,7 +21,17 @@ class Child(Parent):
         print("Child class constructor called")
         # Parent.__init__(self)  # one way of calling parent class constructor
         super().__init__()  # recommended way of calling the parent class constructor
+        self._child_family_name = "XYZ"
+        self.name = "Child"
 
+
+c = Child()
+print(c.name)
+print(c._family_name)
+
+
+p = Parent()
+print(p._family_name)
 
 """
 c = Child()
@@ -26,7 +41,7 @@ Child class constructor called
 parent class constructor called
 
 """
-c = Child()
+# c = Child()
 
 
 class Person:
