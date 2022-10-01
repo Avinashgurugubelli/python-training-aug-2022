@@ -1,0 +1,14 @@
+{
+    "name": "Gopal",
+    "age": 30,
+    "isAlive": true,
+    "PhoneNumber": null,
+    "skills": [
+        "C#",
+        "Python"
+    ],
+    "address": {
+        "city": "VSKP",
+        "State": "AP"
+    }
+}

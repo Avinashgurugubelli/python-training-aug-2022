@@ -67,14 +67,15 @@ Access modifier:
 ---------------
 - private, public, protected
 
-- Public: (in python it is denoted by single underscore '_' )
+- Public: (no underscore)
  - Value can be accessed inside a class and out the class using class object.
  - This can be specified to both attributes/fields, methods
 
 - private (in python it is denoted by double underscore '__' )
     - Value can be accessed inside a class but not outside the class
     - This can be specified to both attributes/fields, methods
-- protected: 
+    
+- protected: (in python it is denoted by single underscore '_' )
   - Value can be accessed inside a class and its children classes, but not outside the class
   - This can be specified to both attributes/fields, methods
 '''
