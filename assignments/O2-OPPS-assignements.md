@@ -35,6 +35,7 @@ Create objects of Letter class, PostMan class and PostOffice class, invoke appro
 - ABC Mart has made its service online for few of the products available in the mart by providing additional online discount and with a feature of shipping the order to the customers through courier. The process of calculation of the order price and shipping the order request to customer and providing them tracking id process has to be automated.
 - The class design for the same is given below.
 
+![alt](resources/03.png)
 ## Notes
 
 - Do not include any extra instance/static variables instance/static methods in the given classes
@@ -45,7 +46,7 @@ Create objects of Letter class, PostMan class and PostOffice class, invoke appro
 
 - Read notes and examples carefully for better understanding of the logic
 
-![alt](./resources/03_1..png)
+![alt](./resources/03_1.png)
 
 ## Order class
 
